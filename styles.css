@@ -1,45 +1,46 @@
 /* Estilos básicos */
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  header, main, footer {
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  nav ul {
-    list-style: none;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  #hero {
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  #services ul {
-    list-style: none;
-  }
-  
-  #services ul li {
-    background-color: #eee;
-    margin: 5px 0;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  #newsletter-form label,
-  #newsletter-form input {
-    margin-bottom: 10px;
-  }
-  
+  font-family: Arial, sans-serif;
+}
+
+header,
+main,
+footer {
+  margin: 20px;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+#hero {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#services ul {
+  list-style: none;
+}
+
+#services ul li {
+  background-color: #eee;
+  margin: 5px 0;
+  padding: 10px;
+  text-align: center;
+}
+
+#newsletter-form label,
+#newsletter-form input {
+  margin-bottom: 10px;
+}
