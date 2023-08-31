@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('newsletter-form');
+// Seção 1: Banner Rotativo
+let currentImgIndex = 0;
+const images = document.querySelectorAll('.banner-img');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+function rotateImages() {
+  images[currentImgIndex].style.display = 'none';
+  currentImgIndex = (currentImgIndex + 1) % images.length;
+  images[currentImgIndex].style.display = 'block';
+}
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-
-    window.location.href = `mailto:3pmdigital.adm@gmail.com?subject=Inscrição para Newsletter&body=Nome: ${name}%0D%0AEmail: ${email}`;
-  });
-});
+images[0].style.display = 'block'; // Mostrar a primeira imagem
+setInterval(rotateImages, 3000); // Mudar a imagem a cada 3 segundos
