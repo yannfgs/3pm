@@ -1,46 +1,48 @@
-/* Estilos básicos */
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make a background color for the whole page */
 body {
-  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header,
-main,
-footer {
+/* Seção 1 */
+#banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  display: none;
+}
+
+/* Containers */
+.container {
+  display: flex;
+  justify-content: space-between;
   margin: 20px;
+}
+
+.boxed {
+  width: 80%;
+  margin: auto;
+}
+
+/* Boxes */
+.box {
+  flex: 1;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-#hero {
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-#services ul {
-  list-style: none;
-}
-
-#services ul li {
-  background-color: #eee;
-  margin: 5px 0;
-  padding: 10px;
-  text-align: center;
-}
-
-#newsletter-form label,
-#newsletter-form input {
-  margin-bottom: 10px;
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
