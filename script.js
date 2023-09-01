@@ -1,12 +1,21 @@
 // Seção 1: Banner Rotativo
-let currentImgIndex = 0;
-const images = document.querySelectorAll('.banner-img');
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".carousel-item");
+  const totalSlides = slides.length;
+  
+  document.querySelector(".carousel-control-prev").addEventListener("click", function () {
+    goToSlide(currentSlide - 1);
+  });
 
-function rotateImages() {
-  images[currentImgIndex].style.display = 'none';
-  currentImgIndex = (currentImgIndex + 1) % images.length;
-  images[currentImgIndex].style.display = 'block';
-}
+  document.querySelector(".carousel-control-next").addEventListener("click", function () {
+    goToSlide(currentSlide + 1);
+  });
 
-images[0].style.display = 'block'; // Mostrar a primeira imagem
-setInterval(rotateImages, 3000); // Mudar a imagem a cada 3 segundos
+  function goToSlide(n) {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add("active");
+    document.querySelector(".carousel-inner").style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+});

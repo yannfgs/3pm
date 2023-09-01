@@ -11,10 +11,30 @@ body {
 }
 
 /* Seção 1 */
-#banner {
+.carousel {
   width: 100%;
   overflow: hidden;
 }
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  cursor: pointer;
+}
+
 
 .banner-img {
   width: 100%;
