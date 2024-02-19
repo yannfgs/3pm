@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
       goToSlide(currentSlide - 1);
     });
 
+    
   document
     .querySelector(".carousel-control-next")
     .addEventListener("click", function () {
       goToSlide(currentSlide + 1);
     });
+
 
   function goToSlide(n) {
     slides[currentSlide].classList.remove("active");
