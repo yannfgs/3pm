@@ -1,10 +1,11 @@
 // Seção 1: Banner Rotativo
+
 document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
   const slides = document.querySelectorAll(".carousel-item");
   const totalSlides = slides.length;
 
-  
+
   document
     .querySelector(".carousel-control-prev")
     .addEventListener("click", function () {
